@@ -7,6 +7,10 @@ import subprocess
 import torch
 import requests  # DeepL API 사용을 위해 추가
 
+# ====== 타이틀 및 설명 ======
+st.markdown("<h1 style='line-height:1.2;margin-bottom:0;'>SignSync</h1><h3 style='margin-top:0;'>: 영어 수어(ASL) 동영상 업로드, VideoMAE 기반 번역 및 자막 생성 데모</h3>", unsafe_allow_html=True)
+st.markdown("ASL(영어 수어) 동영상 파일을 업로드하면 프레임을 추출하고, VideoMAE 기반 모델로 번역해 자막을 생성하고 영상에 입힙니다.")
+            
 DEEPL_API_KEY = "112a1dc2-2634-49ef-a189-eb674714781b:fx"  # 여기에 본인의 DeepL API 키를 입력하세요
 
 def translate_to_korean(text):
